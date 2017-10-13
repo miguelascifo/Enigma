@@ -26,6 +26,7 @@ public class Main {
             etiquetas = "AA";
         }
 
+        // Se comprueba que no se han usado los caracteres ñ o espacio en el texto a cifrar
         if (texto.matches("(.*)Ñ(.*)") || texto.matches("(.*)ñ(.*)") || texto.matches("Ñ(.*)") || texto.matches("ñ(.*)") || texto.matches("(.*)Ñ") || texto.matches("(.*)ñ")) {
             System.out.println("El texto que has escrito contiene la letra Ñ, que no es soportada. Escribe el texto de nuevo.");
             texto = sc.nextLine();
@@ -37,18 +38,21 @@ public class Main {
             texto = sc.nextLine();
         }
 
+        // Se convierte a texto en mayúsculas
         rI = rI.toUpperCase();
         rII = rII.toUpperCase();
         rIII = rIII.toUpperCase();
         texto = texto.toUpperCase();
         etiquetas = etiquetas.toUpperCase();
 
+        // Se crea el objeto Enigma con la configuración predeterminada
         Enigma enigma = new Enigma(new Rotor(Constantes.rotorI, rI.charAt(0), Constantes.saltoI),
                 new Rotor(Constantes.rotorII, rII.charAt(0), Constantes.saltoII),
                 new Rotor(Constantes.rotorIII, rIII.charAt(0), Constantes.saltoIII),
                 new Reflector(),
                 new Etiquetas(etiquetas));
 
+        // Se pasa cada caracter por la máquina Enigma
         for (int i = 0; i < texto.length(); i++) {
             resultado.append(enigma.caracterCifrado(texto.charAt(i)));
         }
