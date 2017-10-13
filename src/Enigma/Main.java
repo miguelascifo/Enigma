@@ -9,6 +9,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         StringBuilder resultado = new StringBuilder();
 
+        System.out.println("Estás usando un simulador Enigma con soporte para 3 rotores, reflector B y etiquetas\n");
+
         System.out.println("Escribe la clave pulsando la tecla Intro después de cada letra. Orden: Rotor I, Rotor II, Rotor III. Ejemplo: C[Intro]H[Intro]S");
         String rI = sc.nextLine();
         String rII = sc.nextLine();
