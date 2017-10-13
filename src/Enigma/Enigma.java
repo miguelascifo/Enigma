@@ -8,6 +8,7 @@ public class Enigma {
     private Reflector reflector;
     private Etiquetas etiqueta;
 
+    // Inicializar la máquina Enigma con la configuracion del usuario
     public Enigma (Rotor rotorIzq, Rotor rotorMed, Rotor rotorDer, Reflector reflector, Etiquetas etiqueta) {
         this.rotorIzq = rotorIzq;
         this.rotorMed = rotorMed;
@@ -35,6 +36,7 @@ public class Enigma {
         return c;
     }
 
+    // Mover el rotor si el caracter usado es igual que el caracter de salto
     private void incrementarRotores(Rotor rotorIzq, Rotor rotorMed, Rotor rotorDer) {
 
         if(rotorDer.posicionRotor() == rotorDer.saltoRotor()) {

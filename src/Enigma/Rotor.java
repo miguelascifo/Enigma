@@ -7,6 +7,7 @@ class Rotor {
     private int saltoRotor;
     private int anillo = Constantes.indiceCaracter("A".charAt(0));
 
+    // Se inicializa el rotor según su número y configuración
     Rotor (String configuracionRotor, char posicionRotor, char saltoRotor) {
         this.configuracionRotor = configuracionRotor;
         this.posicionRotor = Constantes.indiceCaracter(posicionRotor);
@@ -44,16 +45,15 @@ class Rotor {
     // Empezar de nuevo si se llega al final del rotor y al contrario.
     private int normalizar(int numero) {
         if (numero > 26) {
-            numero = numero - 26;
+            return numero - 26;
         } else if(numero < 1) {
-            numero = 26 + numero;
+            return 26 + numero;
         }
-
         return numero;
     }
 
     void incrementarPosicion() {
-        posicionRotor ++;
+        posicionRotor++;
         if(posicionRotor > 26) {
             posicionRotor = 1;
         }
