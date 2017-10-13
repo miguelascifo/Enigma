@@ -1,2 +1,2 @@
-# Enigma
-Simulador de máquina Enigma
+# Enigma.Enigma
+Simulador de máquina Enigma.Enigma
