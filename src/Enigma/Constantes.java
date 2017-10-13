@@ -2,6 +2,8 @@ package Enigma;
 
 abstract class Constantes {
 
+    // En todos los alfabetos se deja un espacio en blanco al principio para usar una configuración más natural en adelante. Empezando en 1, no en 0.
+
     static final String alfabeto = " ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     static final String rotorI = " EKMFLGDQVZNTOWYHXUSPAIBRCJ";

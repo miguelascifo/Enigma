@@ -8,7 +8,7 @@ class Rotor {
     private int anillo = Constantes.indiceCaracter("A".charAt(0));
 
     // Se inicializa el rotor según su número y configuración
-    Rotor (String configuracionRotor, char posicionRotor, char saltoRotor) {
+    Rotor(String configuracionRotor, char posicionRotor, char saltoRotor) {
         this.configuracionRotor = configuracionRotor;
         this.posicionRotor = Constantes.indiceCaracter(posicionRotor);
         this.saltoRotor = Constantes.indiceCaracter(saltoRotor);
@@ -24,7 +24,7 @@ class Rotor {
 
         // direccion = 0 significa Derecha->Izquierda
         // direccion = 1 significa Izquierda->Derecha
-        if(direccion == 0) {
+        if (direccion == 0) {
             char c = configuracionRotor.charAt(numero);
             numero = Constantes.alfabeto.indexOf(c);
         } else {
@@ -46,7 +46,7 @@ class Rotor {
     private int normalizar(int numero) {
         if (numero > 26) {
             return numero - 26;
-        } else if(numero < 1) {
+        } else if (numero < 1) {
             return 26 + numero;
         }
         return numero;
@@ -54,7 +54,7 @@ class Rotor {
 
     void incrementarPosicion() {
         posicionRotor++;
-        if(posicionRotor > 26) {
+        if (posicionRotor > 26) {
             posicionRotor = 1;
         }
     }

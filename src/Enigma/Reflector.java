@@ -2,7 +2,8 @@ package Enigma;
 
 class Reflector {
 
-    Reflector() {}
+    Reflector() {
+    }
 
     int caracterCifrado(int numero) {
         String reflector = Constantes.reflector;

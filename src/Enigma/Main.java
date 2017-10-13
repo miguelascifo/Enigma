@@ -20,17 +20,17 @@ public class Main {
         System.out.println("Escribe las etiquetas que quieres tener cambiadas. Dejalo en blanco si no las quieres cambiar. Ejemplo: AM;HE;QV");
         String etiquetas = sc.nextLine();
 
-        if(etiquetas.equals("")){
+        if (etiquetas.equals("")) {
             etiquetas = "AA";
         }
 
-        if (texto.matches("(.*)Ñ(.*)") || texto.matches("(.*)ñ(.*)") || texto.matches("Ñ(.*)") || texto.matches("ñ(.*)") || texto.matches("(.*)Ñ") || texto.matches("(.*)ñ")){
+        if (texto.matches("(.*)Ñ(.*)") || texto.matches("(.*)ñ(.*)") || texto.matches("Ñ(.*)") || texto.matches("ñ(.*)") || texto.matches("(.*)Ñ") || texto.matches("(.*)ñ")) {
             System.out.println("El texto que has escrito contiene la letra Ñ, que no es soportada. Escribe el texto de nuevo.");
             texto = sc.nextLine();
-        } else if (texto.matches("(.*) (.*)") || texto.matches(" (.*)") || texto.matches("(.*) ") || texto.matches(" ")){
+        } else if (texto.matches("(.*) (.*)") || texto.matches(" (.*)") || texto.matches("(.*) ") || texto.matches(" ")) {
             System.out.println("El texto que has escrito contiene uno o más espacios. Debes eliminarlos para continuar. Escribe el texto de nuevo.");
             texto = sc.nextLine();
-        } else if (texto.matches("")){
+        } else if (texto.matches("")) {
             System.out.println("No has escrito nada. Escribe el texto ahora.");
             texto = sc.nextLine();
         }

@@ -7,7 +7,7 @@ class Etiquetas {
     Etiquetas(String etiqueta) {
 
         this.etiqueta = new int[26];
-        for(int i = 0; i < this.etiqueta.length; i++) {
+        for (int i = 0; i < this.etiqueta.length; i++) {
             // Cada letra se empareja con sí misma
             this.etiqueta[i] = i;
         }
