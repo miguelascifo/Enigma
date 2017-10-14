@@ -32,7 +32,7 @@ class Rotor {
             numero = configuracionRotor.indexOf(c);
         }
 
-        // Operación contraria para obtener el caracter
+        // Operación contraria para obtener el carácter
         numero = numero - posicionRotor;
         numero = normalizar(numero);
 

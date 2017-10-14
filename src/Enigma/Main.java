@@ -9,9 +9,9 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         StringBuilder resultado = new StringBuilder();
 
-        System.out.println("Estás usando un simulador Enigma con soporte para 3 rotores, reflector B y etiquetas\n");
+        System.out.println("Estas usando un simulador Enigma con soporte para 3 rotores, reflector B y etiquetas\n");
 
-        System.out.println("Escribe la clave pulsando la tecla Intro después de cada letra. Orden: Rotor I, Rotor II, Rotor III. Ejemplo: C[Intro]H[Intro]S");
+        System.out.println("Escribe la clave pulsando la tecla Intro despues de cada letra. Orden: Rotor I, Rotor II, Rotor III. Ejemplo: C[Intro]H[Intro]S");
         String rI = sc.nextLine();
         String rII = sc.nextLine();
         String rIII = sc.nextLine();
@@ -26,12 +26,12 @@ public class Main {
             etiquetas = "AA";
         }
 
-        // Se comprueba que no se han usado los caracteres ñ o espacio en el texto a cifrar
+        // Se comprueba que no se han usado los caracteres ñ, espacio o en blanco en el texto a cifrar
         if (texto.matches("(.*)Ñ(.*)") || texto.matches("(.*)ñ(.*)") || texto.matches("Ñ(.*)") || texto.matches("ñ(.*)") || texto.matches("(.*)Ñ") || texto.matches("(.*)ñ")) {
             System.out.println("El texto que has escrito contiene la letra Ñ, que no es soportada. Escribe el texto de nuevo.");
             texto = sc.nextLine();
         } else if (texto.matches("(.*) (.*)") || texto.matches(" (.*)") || texto.matches("(.*) ") || texto.matches(" ")) {
-            System.out.println("El texto que has escrito contiene uno o más espacios. Debes eliminarlos para continuar. Escribe el texto de nuevo.");
+            System.out.println("El texto que has escrito contiene uno o mas espacios. Debes eliminarlos para continuar. Escribe el texto de nuevo.");
             texto = sc.nextLine();
         } else if (texto.matches("")) {
             System.out.println("No has escrito nada. Escribe el texto ahora.");
@@ -52,7 +52,7 @@ public class Main {
                 new Reflector(),
                 new Etiquetas(etiquetas));
 
-        // Se pasa cada caracter por la máquina Enigma
+        // Se pasa cada carácter por el simulador Enigma
         for (int i = 0; i < texto.length(); i++) {
             resultado.append(enigma.caracterCifrado(texto.charAt(i)));
         }

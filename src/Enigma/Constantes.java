@@ -17,7 +17,7 @@ abstract class Constantes {
 
     static final String reflector = " YRUHQSLDPXNGOKMIEBFZCWVJAT";
 
-    // Devuelve el índice del caracter introducido. Se compara con alfabeto.
+    // Devuelve el índice del caracter introducido. Se compara con el alfabeto común.
     static int indiceCaracter(char caracter) {
         return alfabeto.indexOf(caracter);
     }
