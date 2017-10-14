@@ -22,8 +22,8 @@ class Rotor {
         numero = numero + posicionRotor;
         numero = normalizar(numero);
 
-        // direccion = 0 significa Derecha->Izquierda
-        // direccion = 1 significa Izquierda->Derecha
+        // direccion = 0 significa el camino de IDA
+        // direccion = 1 significa el camino de VUELTA
         if (direccion == 0) {
             char c = configuracionRotor.charAt(numero);
             numero = Constantes.alfabeto.indexOf(c);
